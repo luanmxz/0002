@@ -1,4 +1,4 @@
-package br.com.dayHabits.services;
+package br.com.valkyrie.user.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.dayHabits.dto.UserDTO;
-import br.com.dayHabits.model.User;
-import br.com.dayHabits.repository.UserRepository;
+import br.com.valkyrie.user.dto.UserDTO;
+import br.com.valkyrie.user.model.User;
+import br.com.valkyrie.user.repository.UserRepository;
 
 @Service
 @Transactional
@@ -42,4 +42,13 @@ public class UserService {
 		entity = userRepository.save(entity);
 		return new UserDTO(entity);
 	}
+
+	public UserRepository getUserRepository() {
+		return userRepository;
+	}
+
+	public void setUserRepository(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
+
 }

@@ -1,8 +1,8 @@
-package br.com.dayHabits.dto;
+package br.com.valkyrie.user.dto;
 
 
 import java.util.Date;
-import br.com.dayHabits.model.User;
+import br.com.valkyrie.user.model.User;
 
 
 public class UserDTO {

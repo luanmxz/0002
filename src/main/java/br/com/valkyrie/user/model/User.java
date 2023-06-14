@@ -1,4 +1,4 @@
-package br.com.dayHabits.model;
+package br.com.valkyrie.user.model;
 
 import java.util.Date;
 
@@ -17,22 +17,22 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Column(name="user_id")
+	@Column(name="a0001_user_id")
 	private Long id;
 	
-	@Column(name="username")
+	@Column(name="a0001_username")
 	private String username;
 	
-	@Column(name="email")
+	@Column(name="a0001_email")
 	private String email;
 	
-	@Column(name="password")
+	@Column(name="a0001_password")
 	private String password;
 	
-	@Column(name="create_time")
+	@Column(name="a0001_create_time")
 	private Date create_time;
 	
-	@Column(name="update_time")
+	@Column(name="a0001_update_time")
 	private Date update_time;
 	
 	public User () {

@@ -1,4 +1,4 @@
-package br.com.dayHabits.controller;
+package br.com.valkyrie.user.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -16,9 +16,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.dayHabits.dto.UserDTO;
-import br.com.dayHabits.repository.UserRepository;
-import br.com.dayHabits.services.UserService;
+import br.com.valkyrie.user.dto.UserDTO;
+import br.com.valkyrie.user.services.UserService;
 
 @RestController
 @RequestMapping("/api/user")
@@ -26,10 +25,6 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-	
-	@Autowired
-	private UserRepository userRepository;
-	
 	
 	@GetMapping
 	public ResponseEntity<List<UserDTO>> findAll() {
