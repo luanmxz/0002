@@ -37,8 +37,6 @@ public class UserService {
 		entity.setUsername(dto.getUsername());
 		entity.setEmail(dto.getEmail());
 		entity.setPassword(dto.getPassword());
-		entity.setCreate_time(dto.getCreate_time());
-		entity.setUpdate_time(dto.getUpdate_time());
 		entity = userRepository.save(entity);
 		return new UserDTO(entity);
 	}

@@ -12,19 +12,15 @@ public class UserDTO {
 	private String username;
 	
 	private String email;
-	private Date create_time;
-	private Date update_time;
 	private String password;
 
 	public UserDTO() {}
 	
-	public UserDTO(Long id, String username, String email, String password, Date create_time, Date update_time) {
+	public UserDTO(Long id, String username, String email, String password) {
 		this.setId(id);
 		this.username = username;
 		this.email = username;
 		this.password = password;
-		this.create_time = create_time;
-		this.update_time = update_time;
 	}
 	
 	public UserDTO(User user) {
@@ -32,8 +28,6 @@ public class UserDTO {
 		this.username = user.getUsername();
 		this.email = user.getEmail();
 		this.password = user.getPassword();
-		this.create_time = user.getCreate_time();
-		this.update_time = user.getUpdate_time();
 	}
 	
 	public String getUsername() {
@@ -47,18 +41,6 @@ public class UserDTO {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public Date getCreate_time() {
-		return create_time;
-	}
-	public void setCreate_time(Date create_time) {
-		this.create_time = create_time;
-	}
-	public Date getUpdate_time() {
-		return update_time;
-	}
-	public void setUpdate_time(Date update_time) {
-		this.update_time = update_time;
 	}
 
 	public String getPassword() {
